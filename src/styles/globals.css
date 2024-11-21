@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-family: 'Berkeley';
+    src: url('../../public/fonts/berkeley-mono.woff') format('woff');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+    font-family: 'Grotesk-Sharp';
+    src: url('../../public/fonts/sharp-grotesk-bold.woff') format('woff');
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --black: #000000;
+    --white: #ffffff;
+    --green:  #019c00;
+    --light-green: #009c00ea;
+    --light-blue: #133e79;
+    --orange: #f7931a;
+    --tan: #d2b48c;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
+    font-family: 'Berkeley', 'Grotesk-Sharp', Arial, Helvetica, sans-serif;
 }

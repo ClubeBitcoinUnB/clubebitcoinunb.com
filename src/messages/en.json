@@ -1,0 +1,19 @@
+{
+    "Home": {
+        "description": "Student Club from Universisty of Brasília focused on Bitcoin education and development."
+    },
+
+    "Header": {
+        "Title1": "UnB",
+        "Title2": "Bitcoin",
+        "Title3": "Club",
+        "About": "About",
+        "Members": "Members",
+        "Workshops": "Workshops",
+        "Infrastructure": "Infrastructure"
+    },
+
+    "Footer": {
+        "": ""
+    }
+}

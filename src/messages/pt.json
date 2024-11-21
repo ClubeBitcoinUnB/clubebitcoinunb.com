@@ -1,0 +1,19 @@
+{
+    "Home": {
+        "description": "Clube Estudantil da Universidade de Brasília focado em educação e desenvolvimento sobre Bitcoin."
+    },
+
+    "Header": {
+        "Title1": "Clube",
+        "Title2": "Bitcoin",
+        "Title3": "UnB",
+        "About": "Sobre",
+        "Members": "Membros",
+        "Workshops": "Workshops",
+        "Infrastructure": "Infraestrutura"
+    },
+
+    "Footer": {
+        "": ""
+    }
+}
