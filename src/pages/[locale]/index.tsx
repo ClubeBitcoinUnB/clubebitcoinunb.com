@@ -36,7 +36,7 @@ export const getStaticProps = async ({ params }: { params: { locale: string } })
 };
 
 export default function Home({ locale }: { locale: string }) {
-    console.log(locale);
+    //console.log(locale);
 
     const translate = useTranslations("Home");
 

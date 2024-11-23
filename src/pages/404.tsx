@@ -12,7 +12,7 @@ export default function Custom404() {
     const locale = useLocale();
 
     const messages = require(`@/messages/${locale}.json`);
-    console.log(locale);
+    //console.log(locale);
     
     return (
         <>
