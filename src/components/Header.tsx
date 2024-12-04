@@ -13,11 +13,11 @@ export default function Header({ locale }: HeaderProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
-        <header className="sticky top-0 shadow-xl bg-green text-white font-berkeley">
+        <header className="sticky top-0 shadow-xl bg-green text-white font-berkeley z-50">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-32">
                     <div className="flex items-center space-x-3">
-                        <Link href={`/${locale}`}>
+                        <Link href={`/`}>
                             <Image
                                 src="/assets/logo.png"
                                 alt="Clube Bitcoin UnB"
@@ -40,13 +40,11 @@ export default function Header({ locale }: HeaderProps) {
                     
                     <div className="flex items-center space-x-8">
                         <nav className="hidden md:flex space-x-8 font-bold">
-                            <a href="#" className="hover:text-orange">{translate("home")}</a>
-
-                            <a href="#" className="hover:text-orange">{translate("members")}</a>
-
-                            <a href="https://github.com/ClubeBitcoinUnB/workshops/" className="hover:text-orange">{translate("workshops")}</a>
+                            <Link href="/" className="hover:text-orange">{translate("home")}</Link>
 
                             <Link href={`/${locale}/resources`} className="hover:text-orange">{translate("resources")}</Link>
+
+                            <a href="https://github.com/ClubeBitcoinUnB/workshops/" className="hover:text-orange">{translate("workshops")}</a>
                         </nav>
                         <LanguageSwitcher />
                     </div>               
@@ -78,7 +76,7 @@ export default function Header({ locale }: HeaderProps) {
                                     height={40}
                                     className="h-12 w-auto border-3 border-white"
                                 />
-                                <p className="text-xs mt-2 text-center">Established<br/>872,278</p>
+                                <p className="text-xs mt-2 text-center">Established<br/>XXX,XXX</p>
                             </div>
 
                             <a 
@@ -89,13 +87,13 @@ export default function Header({ locale }: HeaderProps) {
                                 {translate("home")}
                             </a>
 
-                            <a 
-                                href="#" 
+                            <Link 
+                                href={`/${locale}/resources`} 
                                 className="hover:text-orange"
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                {translate("members")}
-                            </a>
+                                {translate("resources")}
+                            </Link>
 
                             <a 
                                 href="#" 
@@ -104,14 +102,6 @@ export default function Header({ locale }: HeaderProps) {
                             >
                                 {translate("workshops")}
                             </a>
-
-                            <Link 
-                                href={`/${locale}/resources`} 
-                                className="hover:text-orange"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {translate("resources")}
-                            </Link>
 
                             <div>
                                 <LanguageSwitcher />

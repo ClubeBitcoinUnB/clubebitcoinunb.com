@@ -49,7 +49,7 @@ export default function Custom404() {
                     </div>
                 </main>
 
-                <Footer></Footer>
+                <Footer/>
             </Wrapper>
         </NextIntlClientProvider>
         </>

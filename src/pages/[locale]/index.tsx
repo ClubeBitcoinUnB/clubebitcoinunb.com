@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import Image from "next/image";
+import Link from "next/link";
+import Image from 'next/image'
 import { useTranslations } from "next-intl";
 import Wrapper from "@/components/Wrapper";
+import Content from "@/components/Content";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NostrEmbed from "@/components/NostrEmbed";
+import XEmbed from "@/components/XEmbed";
 
 const locales = ["en", "pt"];
 
@@ -42,33 +46,127 @@ export default function Home({ locale }: { locale: string }) {
 
     return (
         <Wrapper>
-            <Header locale={locale}></Header>
+            <Header locale={locale}/>
 
-            <main className="w-full flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-base">
-                <p>&quot;Cypherpunks write code. We know that someone has to write software to defend privacy, 
-                    and since we cant get privacy unless we all do, were going to write it. We publish our 
-                    code so that our fellow Cypherpunks may practice and play with it. Our code is free for all 
-                    to use, worldwide.&quot;
-                </p>
-                <h1><b>&mdash;Eric Hughes</b></h1>
+            <Content>
+                <div className="text-3xl font-grotesk font-bold">
+                    {translate("who")}
+                </div>
+                <div className="text-xl mb-8">
+                    {translate("who-description")}
+                </div>
 
-                <br/>
+                <div className="text-3xl font-grotesk font-bold">
+                    {translate("what")}
+                </div>
+                <div className="text-xl mb-8">
+                    {translate("what-description")}
+                </div>
 
-                <p>&quot;I dont believe we shall ever have a good money again before we take the thing out of the
-                     hands of government, that is, we cant take it violently out of the hands of government, all
-                      we can do is by some sly roundabout way introduce something that they cant stop.&quot;
-                </p>
-                <h1><b>&mdash;Friedrich Hayek</b></h1>
+                <div className="text-3xl font-grotesk font-bold">
+                    {translate("how")}
+                </div>
+                <div className="text-xl mb-8">
+                    {translate("how-description")}
+                </div>
 
-                <br/>
+                <div className="text-3xl font-grotesk font-bold">
+                    {translate("when")}
+                </div>
+                <div className="text-xl mb-8">
+                    {translate("when-description")}
+                </div>
 
-                <p>&quot;If you dont believe me or dont get it, I dont have time to try to convince you, sorry.&quot;</p>
-                <h1><b>&mdash;Satoshi Nakamoto</b></h1>
-                
+                {/* Link Section */}
+                <div className="text-3xl font-grotesk font-bold mb-4">
+                    {translate("our-links")}
+                </div>
 
-            </main>
+                <div className="text-2xl font-grotesk font-bold">
+                    <Link href="https://github.com/ClubeBitcoinUnB" className="hover:text-orange">
+                        <Image 
+                            src={`/assets/github.svg`} 
+                            alt="GitHub" 
+                            width={0} 
+                            height={0}
+                            style={{ 
+                                width: 'auto', 
+                                height: '1em', 
+                                display: 'inline-block',
+                                verticalAlign: 'baseline'
+                            }}
+                        />
+                        &nbsp;
+                        GitHub
+                    </Link>
+                </div>
+                <div className="text-xl mb-4">
+                    {translate.rich("github-description")}
+                </div>
 
-            <Footer></Footer>
+                <div className="text-2xl font-grotesk font-bold">
+                    <Link href="https://njump.me/npub105tr46lgr3zlz68sjyk4026y0ynd7uckzys0gk7jhpep54w4s50qzdv8xy" className="hover:text-orange">
+                        <Image 
+                            src={`/assets/nostr.png`} 
+                            alt="Nostr" 
+                            width={0} 
+                            height={0}
+                            style={{ 
+                                width: 'auto', 
+                                height: '1em', 
+                                display: 'inline-block',
+                                verticalAlign: 'baseline'
+                            }}
+                        />
+                        &nbsp;
+                        Nostr
+                    </Link>
+                </div>
+                <div className="text-xl mb-6 break-words">
+                    {translate("nostr-description")}
+                            
+                    <br/>
+                    <br/>
+                    
+                    <NostrEmbed/>
+                </div>
+
+                <div className="text-2xl font-grotesk font-bold">
+                    <Link href="https://x.com/ClubeBitcoinUnB" className="hover:text-orange">
+                        𝕏 .com
+                    </Link>
+                </div>
+                <div className="text-xl mt-2 mb-6">
+                    <XEmbed username="ClubeBitcoinUnB"/>
+                </div>
+
+                <div className="text-2xl font-grotesk font-bold">
+                    <Link href="https://www.linkedin.com/company/clube-bitcoin-unb" className="hover:text-orange">
+                        <Image 
+                            src={`/assets/linkedin.png`} 
+                            alt="LinkedIn" 
+                            width={0} 
+                            height={0}
+                            style={{ 
+                                width: 'auto', 
+                                height: '1em', 
+                                display: 'inline-block',
+                                verticalAlign: 'baseline'
+                            }}
+                        />
+                        &nbsp;
+                        LinkedIn
+                    </Link>
+                </div>
+                <div className="text-xl mb-4">
+                    
+                </div>
+                 
+
+
+            </Content>
+
+            <Footer/>
         </Wrapper>
     );
 }

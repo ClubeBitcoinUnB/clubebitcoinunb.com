@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Wrapper from "@/components/Wrapper";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Head from "next/head";
+import Content from "@/components/Content";
 
 const locales = ["en", "pt"];
 
@@ -42,21 +42,13 @@ export default function Resources({ locale }: { locale: string }) {
     return (
         <>
         <Wrapper>
-            <Header locale={locale}></Header>
+            <Header locale={locale}/>
 
-            <main className="font-grotesk w-full flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="flex flex-col">
-                    <h1 className="text-3xl font-bold mb-6 self-start">
-                        {translate("title")}
-                    </h1>
-                    
-                    <div className="">
-                        {translate("description")}
-                    </div>
-                </div>
-            </main>
+            <Content>
+                <b className="text-4xl">SOON&trade;</b>
+            </Content>
 
-            <Footer></Footer>
+            <Footer/>
         </Wrapper>
         </>
     );
