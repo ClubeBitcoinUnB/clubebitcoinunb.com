@@ -36,15 +36,24 @@ export const getStaticProps = async ({ params }: { params: { locale: string } })
     }
 };
 
-export default function Infra({ locale }: { locale: string }) {
+export default function Resources({ locale }: { locale: string }) {
+    const translate = useTranslations("Resources");
+
     return (
         <>
         <Wrapper>
             <Header locale={locale}></Header>
 
-
-            <main>
-                infra page
+            <main className="font-grotesk w-full flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="flex flex-col">
+                    <h1 className="text-3xl font-bold mb-6 self-start">
+                        {translate("title")}
+                    </h1>
+                    
+                    <div className="">
+                        {translate("description")}
+                    </div>
+                </div>
             </main>
 
             <Footer></Footer>

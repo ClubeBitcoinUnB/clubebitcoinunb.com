@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useState } from "react";
 
 type HeaderProps = {
     locale: string;
@@ -9,16 +10,17 @@ type HeaderProps = {
 
 export default function Header({ locale }: HeaderProps) {
     const translate = useTranslations("Header");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
-        <header className="sticky top-0 shadow-xl bg-green text-white">
+        <header className="sticky top-0 shadow-xl bg-green text-white font-berkeley">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-36">
+                <div className="flex justify-between items-center h-32">
                     <div className="flex items-center space-x-3">
                         <Link href={`/${locale}`}>
                             <Image
                                 src="/assets/logo.png"
-                                alt="Logo"
+                                alt="Clube Bitcoin UnB"
                                 width={40}
                                 height={40}
                                 className="h-24 w-auto border-3 border-white"
@@ -27,33 +29,96 @@ export default function Header({ locale }: HeaderProps) {
 
                         <div>
                             <h1 className="text-2xl font-bold text-white">
-                                {translate("Title1")}
+                                {translate("title1")}
                                 <br/>
-                                {translate("Title2")}
+                                {translate("title2")}
                                 <br/>
-                                {translate("Title3")}
+                                {translate("title3")}
                             </h1>
                         </div>
                     </div>
                     
                     <div className="flex items-center space-x-8">
                         <nav className="hidden md:flex space-x-8 font-bold">
-                            {/*<a href="#" className="hover:text-black">{translate("About")}</a>*/}
-                            <a href="#" className="hover:text-orange">{translate("Members")}</a>
-                            <a href="#" className="hover:text-orange">{translate("Workshops")}</a>
-                            <Link href={`/${locale}/infra`} className="hover:text-orange">{translate("Infrastructure")}</Link>
+                            <a href="#" className="hover:text-orange">{translate("home")}</a>
+
+                            <a href="#" className="hover:text-orange">{translate("members")}</a>
+
+                            <a href="https://github.com/ClubeBitcoinUnB/workshops/" className="hover:text-orange">{translate("workshops")}</a>
+
+                            <Link href={`/${locale}/resources`} className="hover:text-orange">{translate("resources")}</Link>
                         </nav>
                         <LanguageSwitcher />
                     </div>               
                     
-                    {/*
-                    <button className="md:hidden">
+                    <button 
+                        className="md:hidden z-20"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth={2} 
+                                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                            />
                         </svg>
                     </button>
-                    */}
                 </div>
+
+                {/* Mobile menu */}
+                {isMenuOpen && (
+                    <div className="md:hidden fixed inset-0 bg-green z-10 pt-36">
+                        <nav className="flex flex-col items-center space-y-8 pt-8 font-bold">
+                            <div className="flex flex-col items-center">
+                                <Image
+                                    src="/assets/logo.png"
+                                    alt="Clube Bitcoin UnB"
+                                    width={40}
+                                    height={40}
+                                    className="h-12 w-auto border-3 border-white"
+                                />
+                                <p className="text-xs mt-2 text-center">Established<br/>872,278</p>
+                            </div>
+
+                            <a 
+                                href="#" 
+                                className="hover:text-orange"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {translate("home")}
+                            </a>
+
+                            <a 
+                                href="#" 
+                                className="hover:text-orange"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {translate("members")}
+                            </a>
+
+                            <a 
+                                href="#" 
+                                className="hover:text-orange"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {translate("workshops")}
+                            </a>
+
+                            <Link 
+                                href={`/${locale}/resources`} 
+                                className="hover:text-orange"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {translate("resources")}
+                            </Link>
+
+                            <div>
+                                <LanguageSwitcher />
+                            </div>
+                        </nav>
+                    </div>
+                )}
             </div>
         </header>
     );

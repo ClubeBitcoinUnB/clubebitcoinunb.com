@@ -44,7 +44,7 @@ export default function Home({ locale }: { locale: string }) {
         <Wrapper>
             <Header locale={locale}></Header>
 
-            <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-base">
+            <main className="w-full flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-base">
                 <p>&quot;Cypherpunks write code. We know that someone has to write software to defend privacy, 
                     and since we cant get privacy unless we all do, were going to write it. We publish our 
                     code so that our fellow Cypherpunks may practice and play with it. Our code is free for all 

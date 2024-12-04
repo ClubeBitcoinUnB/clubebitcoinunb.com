@@ -6,7 +6,7 @@ interface WrapperProps {
 
 export default function Wrapper({ children }: WrapperProps) {
     return(
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col font-sans">
             {children}
         </div>
     )

@@ -1,0 +1,15 @@
+{
+    "names": {
+      "_": "7d163aebe81c45f168f0912d57ab447926df73161120f45bd2b8721a55d5851e"
+      
+    },
+    "relays": {
+        "7d163aebe81c45f168f0912d57ab447926df73161120f45bd2b8721a55d5851e": [
+          "wss://nos.lol",
+          "wss://relay.damus.io",
+          "wss://relay.primal.net",
+          "wss://ftp.halifax.rwth-aachen.de/nostr"
+      ]
+    }  
+}
+  

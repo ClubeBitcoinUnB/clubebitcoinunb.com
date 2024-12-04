@@ -4,16 +4,22 @@
     },
 
     "Header": {
-        "Title1": "Clube",
-        "Title2": "Bitcoin",
-        "Title3": "UnB",
-        "About": "Sobre",
-        "Members": "Membros",
-        "Workshops": "Workshops",
-        "Infrastructure": "Infraestrutura"
+        "title1": "Clube",
+        "title2": "Bitcoin",
+        "title3": "UnB",
+        "about": "Sobre",
+        "members": "Membros",
+        "workshops": "Workshops",
+        "resources": "Recursos",
+        "home": "Home"
     },
 
     "Footer": {
         "": ""
+    },
+
+    "Resources": {
+        "title": "Recursos",
+        "description": "Recursos e infraestrutura oferecidos aos nossos membros."
     }
 }

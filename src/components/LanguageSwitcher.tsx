@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
         <select 
             value={currentLocale}
             onChange={(e) => handleLanguageChange(e.target.value)}
-            className="bg-green rounded-lg cursor-pointer"
+            className="bg-green rounded-lg cursor-pointer font-berkeley font-bold hover:bg-none"
         >
             {Object.entries(languages).map(([code, name]) => (
                 <option key={code} value={code}>

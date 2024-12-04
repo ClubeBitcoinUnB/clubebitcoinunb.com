@@ -25,9 +25,9 @@ export default function Custom404() {
                 <Header locale={locale}></Header>
 
                 <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <div className="flex flex-col items-center justify-center text-center sm:space-y-8">
+                    <div className="flex flex-col items-center justify-center sm:space-y-8">
                         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-                            404
+                            404 Not Found
                         </h1>
                         
                         <Image
