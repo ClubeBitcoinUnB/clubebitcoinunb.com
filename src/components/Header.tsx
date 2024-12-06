@@ -80,7 +80,7 @@ export default function Header({ locale }: HeaderProps) {
                             </div>
 
                             <a 
-                                href="#" 
+                                href={`/${locale}`}
                                 className="hover:text-orange"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -88,7 +88,7 @@ export default function Header({ locale }: HeaderProps) {
                             </a>
 
                             <Link 
-                                href={`/${locale}/resources`} 
+                                href={`/${locale}/resources`}
                                 className="hover:text-orange"
                                 onClick={() => setIsMenuOpen(false)}
                             >

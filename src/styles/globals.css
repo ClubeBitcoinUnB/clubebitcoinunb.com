@@ -4,12 +4,22 @@
 
 @font-face {
     font-family: 'Berkeley';
-    src: url('../../public/fonts/berkeley-mono.woff') format('woff');
+    src: url('/fonts/berkeley-mono.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Grotesk-Sharp';
-    src: url('../../public/fonts/sharp-grotesk-bold.woff') format('woff');
+    src: url('/fonts/sharp-grotesk-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'IBMPlexSansBold';
+    src: url('/fonts/IBMPlexSans-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('/fonts/IBMPlexMono.woff') format('woff');
 }
 
 :root {

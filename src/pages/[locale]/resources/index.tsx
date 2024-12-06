@@ -45,7 +45,7 @@ export default function Resources({ locale }: { locale: string }) {
             <Header locale={locale}/>
 
             <Content>
-                <b className="text-4xl">SOON&trade;</b>
+                <b className="text-4xl font-ibmplexbold">SOON&trade;</b>
             </Content>
 
             <Footer/>

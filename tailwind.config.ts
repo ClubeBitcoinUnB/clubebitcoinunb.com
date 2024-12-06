@@ -20,7 +20,9 @@ export default {
             },
             fontFamily: {
                 grotesk: ["Grotesk-Sharp"],
-                berkeley: ["Berkeley"]
+                berkeley: ["Berkeley"],
+                ibmplexbold: ["IBMPlexSansBold"],
+                ibmplexmono: ["IBMPlexMono"]
             },
         },
     },

@@ -19,9 +19,9 @@
         "title3": "Club",
         "about": "About",
         "members": "Members",
-        "workshops": "Workshops",
+        "home": "Home",
         "resources": "Resources",
-        "home": "Home"
+        "workshops": "Workshops"
     },
 
     "Footer": {

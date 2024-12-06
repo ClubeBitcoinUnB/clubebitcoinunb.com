@@ -49,40 +49,40 @@ export default function Home({ locale }: { locale: string }) {
             <Header locale={locale}/>
 
             <Content>
-                <div className="text-3xl font-grotesk font-bold">
+                <div className="text-3xl font-ibmplexbold font-bold">
                     {translate("who")}
                 </div>
-                <div className="text-xl mb-8">
+                <div className="text-xl mb-8 font-ibmplexmono">
                     {translate("who-description")}
                 </div>
 
-                <div className="text-3xl font-grotesk font-bold">
+                <div className="text-3xl font-ibmplexbold">
                     {translate("what")}
                 </div>
-                <div className="text-xl mb-8">
+                <div className="text-xl mb-8 font-ibmplexmono">
                     {translate("what-description")}
                 </div>
 
-                <div className="text-3xl font-grotesk font-bold">
+                <div className="text-3xl font-ibmplexbold">
                     {translate("how")}
                 </div>
-                <div className="text-xl mb-8">
+                <div className="text-xl mb-8 font-ibmplexmono">
                     {translate("how-description")}
                 </div>
 
-                <div className="text-3xl font-grotesk font-bold">
+                <div className="text-3xl font-ibmplexbold">
                     {translate("when")}
                 </div>
-                <div className="text-xl mb-8">
+                <div className="text-xl mb-8 font-ibmplexmono">
                     {translate("when-description")}
                 </div>
 
                 {/* Link Section */}
-                <div className="text-3xl font-grotesk font-bold mb-4">
+                <div className="text-3xl mb-4 font-ibmplexbold">
                     {translate("our-links")}
                 </div>
 
-                <div className="text-2xl font-grotesk font-bold">
+                <div className="text-2xl font-ibmplexbold">
                     <Link href="https://github.com/ClubeBitcoinUnB" className="hover:text-orange">
                         <Image 
                             src={`/assets/github.svg`} 
@@ -100,11 +100,11 @@ export default function Home({ locale }: { locale: string }) {
                         GitHub
                     </Link>
                 </div>
-                <div className="text-xl mb-4">
-                    {translate.rich("github-description")}
+                <div className="text-xl mb-4 font-ibmplexmono">
+                    {translate("github-description")}
                 </div>
 
-                <div className="text-2xl font-grotesk font-bold">
+                <div className="text-2xl font-ibmplexbold">
                     <Link href="https://njump.me/npub105tr46lgr3zlz68sjyk4026y0ynd7uckzys0gk7jhpep54w4s50qzdv8xy" className="hover:text-orange">
                         <Image 
                             src={`/assets/nostr.png`} 
@@ -122,7 +122,7 @@ export default function Home({ locale }: { locale: string }) {
                         Nostr
                     </Link>
                 </div>
-                <div className="text-xl mb-6 break-words">
+                <div className="text-xl mb-6 break-words font-ibmplexmono">
                     {translate("nostr-description")}
                             
                     <br/>
@@ -131,16 +131,16 @@ export default function Home({ locale }: { locale: string }) {
                     <NostrEmbed/>
                 </div>
 
-                <div className="text-2xl font-grotesk font-bold">
+                <div className="text-2xl font-ibmplexbold">
                     <Link href="https://x.com/ClubeBitcoinUnB" className="hover:text-orange">
-                        𝕏 .com
+                        𝕏.com
                     </Link>
                 </div>
                 <div className="text-xl mt-2 mb-6">
                     <XEmbed username="ClubeBitcoinUnB"/>
                 </div>
 
-                <div className="text-2xl font-grotesk font-bold">
+                <div className="text-2xl font-ibmplexbold">
                     <Link href="https://www.linkedin.com/company/clube-bitcoin-unb" className="hover:text-orange">
                         <Image 
                             src={`/assets/linkedin.png`} 
