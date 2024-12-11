@@ -139,29 +139,9 @@ export default function Home({ locale }: { locale: string }) {
                 <div className="text-xl mt-2 mb-6">
                     <XEmbed username="ClubeBitcoinUnB"/>
                 </div>
-
-                <div className="text-2xl font-ibmplexbold">
-                    <Link href="https://www.linkedin.com/company/clube-bitcoin-unb" className="hover:text-orange">
-                        <Image 
-                            src={`/assets/linkedin.png`} 
-                            alt="LinkedIn" 
-                            width={0} 
-                            height={0}
-                            style={{ 
-                                width: 'auto', 
-                                height: '1em', 
-                                display: 'inline-block',
-                                verticalAlign: 'baseline'
-                            }}
-                        />
-                        &nbsp;
-                        LinkedIn
-                    </Link>
-                </div>
-                <div className="text-xl mb-4">
-                    
-                </div>
-                 
+                
+                
+                
 
 
             </Content>

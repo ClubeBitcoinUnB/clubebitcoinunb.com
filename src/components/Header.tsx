@@ -76,7 +76,11 @@ export default function Header({ locale }: HeaderProps) {
                                     height={40}
                                     className="h-12 w-auto border-3 border-white"
                                 />
-                                <p className="text-xs mt-2 text-center">Established<br/>XXX,XXX</p>
+                                <p className="text-xs mt-2 text-center">
+                                    <a href="https://mempool.space/tx/108d6d010645db55e983a225651c43c21145bace3651201cff88e439304cfce9">
+                                        Established<br/>874,185
+                                    </a>
+                                </p>
                             </div>
 
                             <a 
